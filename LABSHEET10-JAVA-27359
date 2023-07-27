@@ -1,0 +1,83 @@
+package com.mycompany.simpletrafficlightsystem;
+
+
+public class YellowLight extends Thread
+{
+     public void run()
+    {
+        while(true)
+        {
+             try
+    { 
+         System.out.println("yellow light");
+        Thread.sleep(2000); 
+    }
+    catch(InterruptedException e)
+    {
+        System.out.println(e);
+    } 
+        }
+    }
+}
+
+package com.mycompany.simpletrafficlightsystem;
+
+public class RedLight extends Thread
+{
+     public void run()
+    {
+        while(true)
+        {
+             try
+    { 
+        System.out.println("Red light");
+        Thread.sleep(10000); 
+    }
+    catch(InterruptedException e)
+    {
+        System.out.println(e);
+    } 
+        }
+    }
+}
+
+package com.mycompany.simpletrafficlightsystem;
+
+public class GrennLight extends Thread
+{
+     public void run()
+    {
+        while(true)
+        {
+             try
+    { 
+         System.out.println("Green light");
+        Thread.sleep(2000); 
+    }
+    catch(InterruptedException e)
+    {
+        System.out.println(e);
+    } 
+        }
+    }
+}
+
+package com.mycompany.simpletrafficlightsystem;
+
+public class SimpleTrafficLightSystem
+{
+
+    public static void main(String[] args)
+    {
+     
+    RedLight t1=new  RedLightThread(); 
+     YellowLight t2=new  YellowLightThread(); 
+     GrennLight t3=new  GrennLightThread(); 
+    t1.start(); 
+    t2.start();
+     t3.start();
+    }
+}
+        
+    
+   
